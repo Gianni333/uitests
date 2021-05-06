@@ -1,10 +1,14 @@
-var logincredentials = require('../../fixtures/login.credentials.json')
+///<reference types='Cypress' />
+const faker = require('faker');
+
+let randomEmail = faker.internet.email();
+let  randomPassword = faker.internet.password();
 
 describe("login", () => {
     it("fails to authenticate", () => {
       cy.visit("/index.php?controller=authentication&back=my-account");
-      cy.get("#email").type(logincredentials.fake_email),
-      cy.get("#passwd").type(logincredentials.fake_password),
+      cy.get("#email").type(randomEmail),
+      cy.get("#passwd").type(randomPassword),
       cy.get("#SubmitLogin").click(),
       cy.get("div[class='alert alert-danger']").should('be.visible'),
       cy.log('Authentication failed')
@@ -12,8 +16,8 @@ describe("login", () => {
 
     it("logs in successfully", () => {
         cy.visit("/index.php?controller=authentication&back=my-account");
-        cy.get("#email").type(logincredentials.real_email),
-        cy.get("#passwd").type(logincredentials.real_password),
+        cy.get("#email").type(Cypress.env('email')),
+        cy.get("#passwd").type(Cypress.env('password')),
         cy.get("#SubmitLogin").click(),
         cy.get("a[class='logout']").should('be.visible'),
         cy.log('Logout button visible')

@@ -1,3 +1,8 @@
 {
-    "baseUrl": "http://automationpractice.com"
+    "baseUrl": "http://automationpractice.com",
+    "env": 
+    {
+        "email": "giannirhino@yahoo.co.uk",
+        "password": "demouser"
+    }
 }

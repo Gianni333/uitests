@@ -23,9 +23,7 @@ describe("address section", () => {
     it("edits address successfully", () => {
       cy.visit("/index.php?controller=addresses");
       cy.get("a[title='Update']").click(),
-      cy.get('p').should(($p) => {
-        expect($p.first()).to.contain('Modify address')
-        });
+      cy.get("p[class='info-title']").should.contain('Modify address'),
       cy.log('On edit address page')
     });
 

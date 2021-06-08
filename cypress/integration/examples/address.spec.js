@@ -4,11 +4,11 @@ let randomEmail = faker.internet.email();
 let  randomPassword = faker.internet.password();
 
 describe("address section", () => {
-    beforeEach(() => {
+    before(() => {
         cy.login()
       });
     
-      afterEach(() => {
+      after(() => {
         cy.logout()
     })
     
@@ -20,11 +20,11 @@ describe("address section", () => {
       cy.log('On my addresses page')
     });
 
-    it("edits address successfully", () => {
+    /*it("edits address successfully", () => {
       cy.visit("/index.php?controller=addresses");
       cy.get("a[title='Update']").click(),
       cy.get("p[class='info-title']").should.contain('Modify address'),
       cy.log('On edit address page')
-    });
+    });*/
 
 });

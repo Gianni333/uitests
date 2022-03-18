@@ -10,7 +10,7 @@ describe("login", () => {
       cy.get("#email").type(randomEmail),
       cy.get("#passwd").type(randomPassword),
       cy.get("#SubmitLogin").click(),
-      cy.get("div[class='alert alert-danger']").should('be.visible'),
+      cy.get("div[class='alert alert-danger']").should('be.visible')
       cy.log('Authentication failed')
     });
 

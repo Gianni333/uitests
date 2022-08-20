@@ -3,9 +3,12 @@
     "cypress:open": "cypress open"
   },
   "devDependencies": {
-    "cypress": "^9.5.2"
+    "cypress": "^9.5.2",
+    "cypress-real-events": "^1.7.0",
+    "cypress-web-vitals": "^0.4.0"
   },
   "dependencies": {
+    "cypress-axe": "^0.14.0",
     "faker": "^5.5.3"
   }
 }

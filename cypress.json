@@ -4,6 +4,8 @@
     {
         "email": "giannirhino@yahoo.co.uk",
         "password": "demouser",
-        "hnburl": "https://www.hollandandbarrett.com/"
-    }
+        "hnburl": "https://www.hollandandbarrett.com/",
+        "hnbbasketpage": "https://www.hollandandbarrett.com/basket"
+    },
+    "defaultCommandTimeout": 40000
 }

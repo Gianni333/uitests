@@ -1,5 +1,7 @@
 ///<reference types='Cypress' />
 
+import "cypress-web-vitals";
+
 Cypress.Commands.add('login', () => { 
     cy.visit("/index.php?controller=authentication&back=my-account");
         cy.get("#email").type(Cypress.env('email')),

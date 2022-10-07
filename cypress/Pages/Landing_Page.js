@@ -31,5 +31,9 @@ class LandingPage {
         return cy.get('[data-test="basket-count"]')
     }
 
+    Subheading() {
+        return cy.get('h2')
+    }
+
 }
 export default LandingPage
